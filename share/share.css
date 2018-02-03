@@ -1,0 +1,87 @@
+.main {
+  background: url('../videoList/bg.png') no-repeat;
+  background-size: 100% 100%;
+  min-height: 100%;
+  margin: 0rem 0.15rem;
+}
+img {
+  width: auto;
+}
+header {
+  text-align: right;
+  padding: 0.5rem 0.6rem;
+}
+header img {
+  height: 0.7rem;
+}
+.green-btn{
+  background: #a3d238;
+  color: #fff;
+  margin-bottom:0.3rem;
+}
+.head_lt{
+  width: 2rem;
+  height: 2rem;
+  float: left;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 0.7rem;
+  
+}
+.header:after{
+  clear:both;
+  content:"";
+  display:block;
+}
+.head_lt img{
+  width: 100%;
+}
+.head_rt{
+  color:#fff;
+  font-size: 0.3rem;
+  text-align: left;
+  margin-left:3.4rem;
+  padding-top: 0.2rem;
+}
+.head_rank{
+  padding: 0.05rem 0.15rem;
+  border-radius: 005rem;
+  background-color: #328ae3;
+  display: inline-block;
+  margin: 0.2rem 0 0.1rem;
+}
+.head_scroe{
+  font-size: 0.4rem;
+}
+.head_scroe img{
+  width: 0.4rem;
+  margin-right: 0.05rem;
+  vertical-align: baseline;
+}
+.head_scroe_2{
+  margin-left: 0.4rem;
+}
+.share_firend{
+  margin:0 0.5rem;
+  height:3.9rem;
+  border:1px solid #000;
+  border-radius: 0.2rem;
+  padding:0.15rem 0;
+  overflow: auto;  
+}
+.share_firend li{
+  margin:0 0.4rem 0.2rem;
+  height:0.6rem;
+  background:#0863b8;
+  line-height: 0.6rem;
+  border-radius: 0.2rem;
+  text-align: left;
+  padding:0 0.25rem;
+  }
+.share_firend_img{
+  float: right;
+  margin-top: 0.15rem;
+}
+.share_xx{
+  width:0.4rem;
+}

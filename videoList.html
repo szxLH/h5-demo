@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html data-dw="750">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,minimal-ui">
+    <title>视频回放</title>
+    <link rel="stylesheet" href="./static/reset.css">
+    <script src="./static/rem.js"></script>
+    <style>
+      .main {
+        background: url('./videoList/bg.png') no-repeat;
+        background-size: 100% 100%;
+        min-height: 100%;
+      }
+      img {
+        width: auto;
+      }
+      header {
+        text-align: right;
+        padding: 0.5rem 0.6rem;
+      }
+      header img {
+        height: 0.7rem;
+      }
+      ul {
+        color: #fff;
+        padding:0.2rem 0.56rem;
+        text-align: left;
+      }
+      ul li {
+        margin-bottom: 0.4rem;
+      }
+      ul p {
+        line-height: 1.6;
+      }
+      ul div {
+        height: 3.6rem;
+        border-radius: 0.15rem;
+        background: #fff;
+        text-align: center;
+        position: relative;
+      }
+      ul div img {
+        position: absolute;
+        top: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+      }
+    </style>
+</head>
+<body>
+    <section id="loading" class="loading" data-lock='1'>
+      <div class="loading-icon"></div>
+    </section>
+    <section class="main hide">
+       <header>
+         <img src="./static/home.png" alt="" onclick="location.href='./index.html'">
+       </header>
+       <ul>
+         <li>
+           <p>某某董事长新年贺词</p>
+           <div style='background-image: url(./home/avtor.jpg)'>
+              <img src="./videoList/play.png" alt="">
+           </div>
+         </li>
+         <li>
+            <p>某某董事长新年贺词</p>
+            <div style='background-image: url(./home/avtor.jpg)'>
+               <img src="./videoList/play.png" alt="">
+            </div>
+          </li>
+       </ul>
+    </section>
+ </body>
+<script src="./static/jquery.min.js"></script>
+<!-- <script src="js/wx.js"></script> -->
+<!-- <script src="js/weixin.js"></script> -->
+<script type="text/javascript" src="./static/main.js"></script>
+</html>
