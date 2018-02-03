@@ -1,0 +1,259 @@
+@charset "UTF-8";
+/**
+ * $fileOverview common[css常用实现封装,, 以fis-开头命名]
+ * $author y.g.q
+ * $date   2014.9.22
+ * $mail   yinguoqing$kingsoft.com
+ */
+/**
+ * .fis-clearfix
+ * $description 清除浮动(不需要添加额外标签)
+ */
+/**
+ * .fis-float
+ * $description 浮动(解决IE6 double margin问题) 
+ * $param [$side=left] 浮动方向
+ */
+/**
+ * .fis-float-left
+ * $description 左浮动
+ */
+/**
+ * .fis-float-right
+ * $description 右浮动
+ */
+/**
+ * .fis-inline-block
+ * $description inline-block展示(兼容inline和block元素)
+ */
+/**
+ * .fis-border-radius
+ * $description 圆角(support IE9+、Firefox 3.5+、Safari、Chrome、Opera)
+ * $param [$radius=5px] 圆角半径
+ */
+/**
+ * .fis-box-shadow
+ * $description 阴影(support Firefox 3.5+、Safari、Chrome、Opera)
+ * $param $shadow 阴影参数(水平偏移值 | 垂直偏移值 | 阴影模糊值 | 阴影颜色)
+ */
+/**
+ * .fis-gradient-vertical
+ * $description 背景垂直渐变(support IE8+、Firefox 3.5+、Safari、Chrome、Opera)
+ * $param [$startColor=#555] 颜色渐变初始值
+ * $param [$endColor=#333] 颜色渐变终值
+ */
+/**
+ * .fis-transition
+ */
+/**
+ * .fis-opacity
+ * $description 透明度(support IE6+、Firefox 3.5+、Safari、Chrome、Opera)
+ * $param [$opacity=100] 透明度值
+ */
+/**
+ * .fis-nowrap
+ * $description 文本不折行
+ */
+/**
+ * .fis-min-height
+ * $description 最小高度
+ * $param [$value] 最小高度值
+ */
+/**
+ * .fis-min-width
+ * $description 最小宽度
+ * $param [$value] 最小宽度值
+ */
+/**
+ * .fis-icon
+ * $description 方形icon 
+ */
+/**
+ * .fis-icon-rect
+ * $description 长方形icon 
+ */
+/**
+ * .icon-arrow
+ * $description 箭头
+ */
+/**
+ * .fis-rotate
+ * $description 旋转
+ */
+/**
+ * .fis-rotate-y
+ * $description 反转
+ */
+/**
+ * .fis-rotate-x
+ * $description 旋转
+ */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  word-wrap: break-word;
+}
+
+body {
+  margin: 0 auto;
+  width: 7.5rem;
+  background-color: #dddddd;
+}
+
+html {
+  font-size: 50px;
+}
+
+body {
+  background-color: #e64145;
+  background-image: url("../shake/images/bg1.jpg");
+  background-size: 100% auto;
+  background-position: top center;
+}
+
+body, html {
+  height: 100%;
+}
+
+.tips {
+  padding-top: 9rem;
+  font-size: 0.6rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.over {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 7.5rem;
+  height: 100%;
+  background-image: url("../shake/images/bg2.jpg");
+  background-size: 100% auto;
+  background-position: top center;
+}
+
+.over .btn-warp {
+  padding-top: 9.2rem;
+}
+
+.over .btn-warp .btn {
+  display: block;
+  margin: 0.18rem auto 0;
+  background-color: #ffffff;
+  width: 4.4rem;
+  height: 1.06rem;
+  font-size: 0.48rem;
+  line-height: 1.06rem;
+  color: #ce2729;
+  text-align: center;
+  border-radius: 0.1rem;
+  box-shadow: 1px 3px 0 0 #8e2628;
+}
+
+.pop {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 7.5rem;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pop .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6.7rem;
+  height: 8.4rem;
+  background-image: url("../shake/images/red_close.png");
+  background-size: 100% 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.pop .inner .title {
+  padding-top: 2.2rem;
+  font-size: 0.6rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.pop .inner .open {
+  margin: 1.85rem auto 0;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 0.4rem;
+  line-height: 2.2rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.pop-open {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 7.5rem;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pop-open .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6.7rem;
+  height: 11.75rem;
+  background-image: url("../shake/images/red_open.png");
+  background-size: 100% 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.pop-open .inner .title {
+  padding-top: 1.8rem;
+  font-size: 0.6rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.pop-open .inner .money {
+  padding-top: 3.8rem;
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.pop-open .inner .sword {
+  font-size: 0.2rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.pop-open .inner .btn {
+  margin: 0.5rem auto 0.2rem;
+  background-color: #ffffff;
+  width: 4.4rem;
+  height: 1.06rem;
+  font-size: 0.48rem;
+  line-height: 1.06rem;
+  color: #ce2729;
+  text-align: center;
+  border-radius: 0.1rem;
+  box-shadow: 1px 3px 0 0 #8e2628;
+}
+
+.pop-open .inner .word {
+  padding-top: 0.08rem;
+  font-size: 0.24rem;
+  color: #ffffff;
+  text-align: center;
+}

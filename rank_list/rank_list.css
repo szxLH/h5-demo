@@ -1,0 +1,347 @@
+@charset "UTF-8";
+/**
+ * $fileOverview common[css常用实现封装,, 以fis-开头命名]
+ * $author y.g.q
+ * $date   2014.9.22
+ * $mail   yinguoqing$kingsoft.com
+ */
+/**
+ * .fis-clearfix
+ * $description 清除浮动(不需要添加额外标签)
+ */
+/**
+ * .fis-float
+ * $description 浮动(解决IE6 double margin问题) 
+ * $param [$side=left] 浮动方向
+ */
+/**
+ * .fis-float-left
+ * $description 左浮动
+ */
+/**
+ * .fis-float-right
+ * $description 右浮动
+ */
+/**
+ * .fis-inline-block
+ * $description inline-block展示(兼容inline和block元素)
+ */
+/**
+ * .fis-border-radius
+ * $description 圆角(support IE9+、Firefox 3.5+、Safari、Chrome、Opera)
+ * $param [$radius=5px] 圆角半径
+ */
+/**
+ * .fis-box-shadow
+ * $description 阴影(support Firefox 3.5+、Safari、Chrome、Opera)
+ * $param $shadow 阴影参数(水平偏移值 | 垂直偏移值 | 阴影模糊值 | 阴影颜色)
+ */
+/**
+ * .fis-gradient-vertical
+ * $description 背景垂直渐变(support IE8+、Firefox 3.5+、Safari、Chrome、Opera)
+ * $param [$startColor=#555] 颜色渐变初始值
+ * $param [$endColor=#333] 颜色渐变终值
+ */
+/**
+ * .fis-transition
+ */
+/**
+ * .fis-opacity
+ * $description 透明度(support IE6+、Firefox 3.5+、Safari、Chrome、Opera)
+ * $param [$opacity=100] 透明度值
+ */
+/**
+ * .fis-nowrap
+ * $description 文本不折行
+ */
+/**
+ * .fis-min-height
+ * $description 最小高度
+ * $param [$value] 最小高度值
+ */
+/**
+ * .fis-min-width
+ * $description 最小宽度
+ * $param [$value] 最小宽度值
+ */
+/**
+ * .fis-icon
+ * $description 方形icon 
+ */
+/**
+ * .fis-icon-rect
+ * $description 长方形icon 
+ */
+/**
+ * .icon-arrow
+ * $description 箭头
+ */
+/**
+ * .fis-rotate
+ * $description 旋转
+ */
+/**
+ * .fis-rotate-y
+ * $description 反转
+ */
+/**
+ * .fis-rotate-x
+ * $description 旋转
+ */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  word-wrap: break-word;
+}
+
+body {
+  margin: 0 auto;
+  width: 7.5rem;
+  background-color: #dddddd;
+}
+
+html {
+  font-size: 50px;
+}
+
+body {
+  background-image: url(../rank_list/images/bg.jpg);
+  background-size: 100% auto;
+}
+
+.search {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  padding: 0.19rem 0.4rem 0;
+  width: 7.5rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.search input {
+  float: left;
+  padding: 0 0.2rem;
+  width: 5.8rem;
+  font-size: 0.3rem;
+  line-height: 0.72rem;
+  color: #5e6266;
+  background-image: url("../rank_list/images/search.png");
+  background-size: 100% 100%;
+  border: none;
+  outline: none;
+  -webkit-border-radius: 0.12rem;
+  -moz-border-radius: 0.12rem;
+  border-radius: 0.12rem;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.search input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #5e6266;
+}
+
+.search input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #5e6266;
+}
+
+.search input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #5e6266;
+}
+
+.search input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #5e6266;
+}
+
+.search .home {
+  float: right;
+  width: 0.72rem;
+  height: 0.72rem;
+  background-image: url("../rank_list/images/home.png");
+  background-size: cover;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.list {
+  padding: 1.2rem 0 3.1rem;
+}
+
+.list li {
+  margin: 0 auto 0.2rem;
+  width: 6.7rem;
+  height: 2rem;
+  border-radius: 0.1rem;
+  background-image: url("../rank_list/images/bg_list.png");
+  background-size: 100% 100%;
+  background-color: transparent;
+  box-shadow: 0 0 0.2rem 0 #0b6776;
+}
+
+.list li .head {
+  float: left;
+  margin-top: 0.4rem;
+  margin-left: 0.8rem;
+  width: 1rem;
+  height: 1rem;
+  border: 0.1rem solid #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.list li .info {
+  float: left;
+  padding-top: 0.42rem;
+  padding-left: 0.18rem;
+}
+
+.list li .info .name {
+  padding-left: 2px;
+  font-size: 0.4rem;
+  color: #ffffff;
+}
+
+.list li .info .tag {
+  margin-top: 0.16rem;
+  width: 1.8rem;
+  height: 0.4rem;
+  font-size: 0.28rem;
+  line-height: 0.4rem;
+  color: #ffffff;
+  text-align: center;
+  background-image: url(../rank_list/images/bg_tag.png);
+  background-size: 100% 100%;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.list li .price {
+  float: right;
+  margin-top: 0.7rem;
+  margin-right: 0.5rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  font-size: 0.5rem;
+  line-height: 0.6rem;
+  color: #fff;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-image: -moz-linear-gradient(-90deg, #318ee7 1%, #2c97e7 100%);
+  background-image: -webkit-linear-gradient(-90deg, #318ee7 1%, #2c97e7 100%);
+  background-image: -ms-linear-gradient(-90deg, #318ee7 1%, #2c97e7 100%);
+}
+
+.list li.first .price {
+  margin: 0;
+  width: 1.49rem;
+  height: 2rem;
+  background-image: url("../rank_list/images/num1.png");
+  background-size: 100% 100%;
+}
+
+.list li.second .price {
+  margin: 0;
+  width: 1.49rem;
+  height: 2rem;
+  background-image: url("../rank_list/images/num2.png");
+  background-size: 100% 100%;
+}
+
+.list li.third .price {
+  margin: 0;
+  width: 1.49rem;
+  height: 2rem;
+  background-image: url("../rank_list/images/num3.png");
+  background-size: 100% 100%;
+}
+
+.me {
+  position: fixed;
+  bottom: 0.96rem;
+  left: 50%;
+  width: 6.7rem;
+  height: 2rem;
+  border-radius: 0.1rem;
+  background-image: url("../rank_list/images/bg_me.png");
+  background-size: 100% 100%;
+  background-color: transparent;
+  box-shadow: 0 0 0.2rem 0 #0b6776;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.me .head {
+  float: left;
+  margin-top: 0.4rem;
+  margin-left: 0.8rem;
+  width: 1rem;
+  height: 1rem;
+  border: 0.1rem solid #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.me .info {
+  float: left;
+  padding-top: 0.42rem;
+  padding-left: 0.18rem;
+}
+
+.me .info .name {
+  padding-left: 2px;
+  font-size: 0.4rem;
+  color: #ffffff;
+}
+
+.me .info .tag {
+  margin-top: 0.16rem;
+  width: 1.8rem;
+  height: 0.4rem;
+  font-size: 0.28rem;
+  line-height: 0.4rem;
+  color: #ffffff;
+  text-align: center;
+  background-image: url(../rank_list/images/bg_mytag.png);
+  background-size: 100% 100%;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}

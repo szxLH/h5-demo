@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cn" data-dw="750">
+<head>
+    <title>创维头脑王者</title>
+    <meta charset="utf-8">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,minimal-ui">
+</head>
+<link rel="stylesheet" href="./shake/shake.css">
+<script type="text/javascript" src="static/rem.js"></script>
+<body>
+    <p class="tips">摇一摇得红包</p>
+    <div class="over">
+        <div class="btn-warp">
+            <div class="btn more">再摇一次</div>
+            <a href="javascript: void(0)" class="btn">我知道了</a>
+        </div>
+    </div>
+    <div class="pop">
+        <div class="inner">
+            <p class="title">收到一个创维红包</p>
+            <div class="open">立即打开</div>
+        </div>
+    </div>
+    <div class="pop-open">
+        <div class="inner">
+            <p class="title">新年快乐，恭喜发财</p>
+            <p class="money">20元</p>
+            <p class="sword">已存入零钱，可直接提现</p>
+            <div class="btn more">再摇一次</div>
+            <p class="word">想要得到更多的红包</p>
+            <p class="word">那就快去答题吧！</p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="static/jquery.min.js"></script>
+<script type="text/javascript" src="./shake/shake.js"></script>
+<script type="text/javascript">
+    var open_id = 'openid';
+    //这个接口前端给后端post一个openid，后端请返回键名为state，值为数字的一个json
+    //state:-1 用户心心不足，抽不了；state：0，没中；其余的就是中了多少钱
+    var url = 'https://www.easy-mock.com/mock/5a6ecbe5c80cc2211846b2b9/mydemo/shake';
+    //我有俩地方需要跳转到首页但是我不知道首页域名帮我填在下面呗
+    var index_page = 'http://baidu.com'
+</script>
+</html>

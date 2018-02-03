@@ -1,0 +1,326 @@
+@charset "UTF-8";
+/**
+ * $fileOverview common[css常用实现封装,, 以fis-开头命名]
+ * $author y.g.q
+ * $date   2014.9.22
+ * $mail   yinguoqing$kingsoft.com
+ */
+/**
+ * .fis-clearfix
+ * $description 清除浮动(不需要添加额外标签)
+ */
+/**
+ * .fis-float
+ * $description 浮动(解决IE6 double margin问题) 
+ * $param [$side=left] 浮动方向
+ */
+/**
+ * .fis-float-left
+ * $description 左浮动
+ */
+/**
+ * .fis-float-right
+ * $description 右浮动
+ */
+/**
+ * .fis-inline-block
+ * $description inline-block展示(兼容inline和block元素)
+ */
+/**
+ * .fis-border-radius
+ * $description 圆角(support IE9+、Firefox 3.5+、Safari、Chrome、Opera)
+ * $param [$radius=5px] 圆角半径
+ */
+/**
+ * .fis-box-shadow
+ * $description 阴影(support Firefox 3.5+、Safari、Chrome、Opera)
+ * $param $shadow 阴影参数(水平偏移值 | 垂直偏移值 | 阴影模糊值 | 阴影颜色)
+ */
+/**
+ * .fis-gradient-vertical
+ * $description 背景垂直渐变(support IE8+、Firefox 3.5+、Safari、Chrome、Opera)
+ * $param [$startColor=#555] 颜色渐变初始值
+ * $param [$endColor=#333] 颜色渐变终值
+ */
+/**
+ * .fis-transition
+ */
+/**
+ * .fis-opacity
+ * $description 透明度(support IE6+、Firefox 3.5+、Safari、Chrome、Opera)
+ * $param [$opacity=100] 透明度值
+ */
+/**
+ * .fis-nowrap
+ * $description 文本不折行
+ */
+/**
+ * .fis-min-height
+ * $description 最小高度
+ * $param [$value] 最小高度值
+ */
+/**
+ * .fis-min-width
+ * $description 最小宽度
+ * $param [$value] 最小宽度值
+ */
+/**
+ * .fis-icon
+ * $description 方形icon 
+ */
+/**
+ * .fis-icon-rect
+ * $description 长方形icon 
+ */
+/**
+ * .icon-arrow
+ * $description 箭头
+ */
+/**
+ * .fis-rotate
+ * $description 旋转
+ */
+/**
+ * .fis-rotate-y
+ * $description 反转
+ */
+/**
+ * .fis-rotate-x
+ * $description 旋转
+ */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  word-wrap: break-word;
+}
+
+body {
+  margin: 0 auto;
+  width: 7.5rem;
+  background-color: #dddddd;
+}
+
+html {
+  font-size: 50px;
+}
+
+body {
+  padding-top: 0.14rem;
+  height: 100%;
+  background-color: #0950a0;
+  background-image: url("../question/images/bg.jpg");
+  background-size: 100% auto;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+.coin {
+  position: absolute;
+  top: 0.55rem;
+  left: 0.5rem;
+}
+
+.coin .icon {
+  display: inline-block;
+  width: 0.48rem;
+  height: 0.48rem;
+  background-image: url("../question/images/coin.png");
+  background-size: 100% 100%;
+}
+
+.coin .num {
+  padding-left: 0.08rem;
+  font-size: 0.4rem;
+  color: #ffffff;
+  vertical-align: middle;
+}
+
+.coin.s {
+  display: none;
+  top: 1.1rem;
+  transform: scale(0.75);
+  -moz-animation: showUp 2s forwards;
+  -webkit-animation: showUp 2s forwards;
+  -o-animation: showUp 2s forwards;
+  -ms-animation: showUp 2s forwards;
+  animation: showUp 2s forwards;
+}
+
+#canvas {
+  display: block;
+  margin: 0 auto;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.home {
+  display: block;
+  position: absolute;
+  top: 0.2rem;
+  right: 0.4rem;
+  width: 0.72rem;
+  height: 0.72rem;
+  background-image: url(../question/images/home.png);
+  background-size: cover;
+}
+
+.question {
+  padding: 1.8rem 1.2rem 0.5rem;
+  min-height: 3.8rem;
+  font-size: 0.28rem;
+  line-height: 0.36rem;
+  color: #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.btn-warp {
+  margin: 0 auto;
+  width: 4.4rem;
+}
+
+.btn-warp .btn {
+  position: relative;
+  margin-top: 0.38rem;
+  width: 4.4rem;
+  height: 1rem;
+  font-size: 0.48rem;
+  line-height: 1rem;
+  color: #0950a0;
+  text-align: center;
+  border-radius: 0.1rem;
+  background-color: #ffffff;
+  box-shadow: 1px 3px 0 0 #0950a0;
+}
+
+.btn-warp .btn .icon {
+  position: absolute;
+  top: 50%;
+  left: 0.2rem;
+  width: 0.32rem;
+  height: 0.32rem;
+  background-size: cover;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.btn-warp .btn.yes {
+  background-color: #a3d238;
+  color: #fff;
+}
+
+.btn-warp .btn.yes .icon {
+  background-image: url("../question/images/yes.png");
+}
+
+.btn-warp .btn.no {
+  background-color: #fb6c4a;
+  color: #fff;
+}
+
+.btn-warp .btn.no .icon {
+  background-image: url("../question/images/no.png");
+}
+
+.pop {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 7.5rem;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pop .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6.7rem;
+  height: 6rem;
+  background-image: url("../question/images/pop_bg.png");
+  background-size: 100% 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.pop .inner .congra {
+  padding-top: 0.6rem;
+  font-size: 0.38rem;
+  line-height: 0.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.pop .inner .congra span {
+  padding-left: 0.3rem;
+  font-size: 0.44rem;
+  vertical-align: text-bottom;
+}
+
+.pop .inner .heart {
+  padding-top: 0.5rem;
+  font-size: 0.38rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.pop .inner .heart .icon {
+  display: inline-block;
+  margin-right: 0.24rem;
+  width: 0.59rem;
+  height: 0.51rem;
+  background-image: url("../question/images/heart.png");
+  background-size: cover;
+  vertical-align: bottom;
+}
+
+.pop .inner .btn {
+  display: block;
+  margin: 1.06rem auto 0;
+  width: 4.4rem;
+  height: 1rem;
+  font-size: 0.48rem;
+  line-height: 1rem;
+  color: #ffffff;
+  text-align: center;
+  background-color: #a3d238;
+  box-shadow: 1px 3px 0 0 #0950a0;
+  border-radius: 0.1rem;
+}
+
+.pop .inner .btn.btn2 {
+  margin-top: 0.16rem;
+  background-color: #ffffff;
+  color: #0950a0;
+}
+
+@keyframes showUp {
+  0% {
+    top: 1.3rem;
+    opacity: 0;
+  }
+  50% {
+    top: 1.1rem;
+    opacity: 1;
+  }
+  100% {
+    top: 0.7rem;
+    opacity: 0;
+  }
+}
