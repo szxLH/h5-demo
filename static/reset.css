@@ -106,7 +106,7 @@ body {
   left: 50%;
   margin-top: -0.3rem;
   margin-left: -0.3rem;
-  background: url(../../images/loading.png) no-repeat;
+  background: url(loading.png) no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   -webkit-animation: rotate360 1s linear 0s infinite;
