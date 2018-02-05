@@ -19,35 +19,66 @@
       }
       header {
         text-align: right;
-        padding: 0.5rem 0.6rem;
+        padding: 0.5rem 0.6rem 1.4rem 0;
       }
       header img {
         height: 0.7rem;
       }
-      ul {
-        color: #fff;
-        padding:0.2rem 0.56rem;
-        text-align: left;
-      }
-      ul li {
-        margin-bottom: 0.4rem;
-      }
-      ul p {
-        line-height: 1.6;
-      }
-      ul div {
-        height: 3.6rem;
-        border-radius: 0.15rem;
+      .video_con{
+        height:4.16rem;
         background: #fff;
-        text-align: center;
         position: relative;
       }
-      ul div img {
+      .video_con div{
+          position: absolute;
+      }
+      .video_con video{
+        height: 100%;
+        width: 100%;
+      }
+      .video_btn div{
+        display: inline-block;
+        width:0.84rem;
+        height:0.84rem;
+        margin-top: 0.3rem;
+        margin-right: 0.5rem;
+        background-size:100% 100%;
+      }
+      .prev{
+        background-image:url('./videoList/left.png');  
+      }
+      .next{
+        background-image:url('./videoList/right.png');  
+      }
+      .pause{
+        background-image:url('./videoList/pause.png');
+      }
+      .play{
+        background-image:url('./videoList/play.png');
+      }
+      .video_send_me{
+        height: 1rem;
         position: absolute;
-        top: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
+        bottom: 0;
+        width: 100%;
+        background: #fff;
+      }
+      .video_send_input{
+        margin-right: 1.4rem;
+        margin-left: 0.4rem;
+        height:100%;
+        line-height: 1rem;
+      }
+      .video_send_input input{
+        width:100%;
+        height:100%;
+      }
+      .send_btn{
+        width:1rem;
+        line-height: 1rem;
+        float: right;
+        color: #0950a0;
+        margin-right: 0.4rem;
       }
     </style>
 </head>
@@ -59,24 +90,62 @@
        <header>
          <img src="./static/home.png" alt="" onclick="location.href='./index.html'">
        </header>
-       <ul>
-         <li>
-           <p>某某董事长新年贺词</p>
-           <div style='background-image: url(./home/avtor.jpg)'>
-              <img src="./videoList/play.png" alt="">
-           </div>
-         </li>
-         <li>
-            <p>某某董事长新年贺词</p>
-            <div style='background-image: url(./home/avtor.jpg)'>
-               <img src="./videoList/play.png" alt="">
-            </div>
-          </li>
-       </ul>
+      <div class="video_con">
+        <video id="video" src="http://www.w3school.com.cn/example/html5/mov_bbb.mp4" autoplay="autoplay"></video>  
+      </div>
+      <div class="video_btn">
+        <div id="prev" class="prev"></div>
+        <div id="playOrPause" onclick="playOrPause()" class="play"></div>
+        <div class="next"></div>
+      </div>
+       <div class="video_send_me">
+        <div class="send_btn" onclick="send()">
+          发弹幕
+        </div>
+        <div class="video_send_input">
+          <input type="text">
+        </div>
+      </div> 
     </section>
  </body>
 <script src="./static/jquery.min.js"></script>
 <!-- <script src="js/wx.js"></script> -->
 <!-- <script src="js/weixin.js"></script> -->
 <script type="text/javascript" src="./static/main.js"></script>
+<script>
+  function playOrPause(){
+    console.log($("#video").get(0).paused)
+    if($("#video").get(0).paused){
+      $("#video").get(0).play();
+      $("#playOrPause").addClass("play")
+      $("#playOrPause").removeClass("pause")
+    }
+    else{
+      $("#video").get(0).pause();
+      $("#playOrPause").addClass("pause")
+      $("#playOrPause").removeClass("play")
+    }
+  }
+  function sendMessage(massage){
+    for(var i=0;i<massage.length;i++){
+      var text=massage[i];
+      var div="<div>"+text+"</div>";
+      var width = $(".video_con").width();
+      var height = Math.floor(Math.random()*$(".video_con").height());
+      var right=Math.floor(Math.random()*$(".video_con").width());
+      $(".video_con").append(div);
+      var length = $('.video_con div').length;
+      $('.video_con div').eq(length-1).css({'top':height,'width':$('.video_con div').eq(length-1).width(),right:right});
+      $('.video_con div').eq(length-1).animate({right:width},6000,function() {
+          $('.video_con div').eq(length-1).remove()
+      });
+    }
+  }
+  function send(){
+    var massage=["heheh","搞笑","的后视镜快速路1"]
+    sendMessage(massage)
+  }
+   
+  
+</script>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html data-dw="750">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,minimal-ui">
+    <title>视频回放</title>
+    <link rel="stylesheet" href="./static/reset.css">
+    <link rel="stylesheet" href="./share/share.css">
+    <script src="./static/rem.js"></script>
+    <style>
+      header {
+        padding: 0.5rem 0 2.7rem;
+      }
+      header div {
+        width: 2rem;
+        height: 2rem;
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+      header img {
+        width: 100%;
+        height: 100%;
+      }
+      .form {
+        padding: 0 0.3rem;
+        text-align: center;
+      }
+      .form div input {
+        width: 100%;
+        height: 1rem;
+        color: rgb(91, 143, 200);
+        font-size: 0.38rem;
+        padding: 0 0.15rem;
+      }
+      input::-ms-input-placeholder {
+        text-align: left;
+        color: rgb(91, 143, 200);
+        font-size: 0.38rem;
+        background-color:#fff;
+      }
+      input::-webkit-input-placeholder {
+        text-align: left;
+        color: rgb(91, 143, 200);
+        font-size: 0.38rem;
+        background-color:#fff;
+      }
+      .login {
+        margin: 3rem auto 0;
+      }
+    </style>
+</head>
+<body>
+    <section id="loading" class="loading" data-lock='1'>
+      <div class="loading-icon"></div>
+    </section>
+    <section class="main hide">
+      <header>
+        <div><img src="./login/logo.png" alt=""></div>
+      </header>
+      <div class="form">
+        <div>
+          <input type="text" placeholder="点击输入工号">
+        </div>
+        <div id='login'class='login common-button'>登录</div>
+      </div>
+    </section>
+ </body>
+<script src="./static/jquery.min.js"></script>
+<!-- <script src="js/wx.js"></script> -->
+<!-- <script src="js/weixin.js"></script> -->
+<script type="text/javascript" src="./static/main.js"></script>
+</html>
