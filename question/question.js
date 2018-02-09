@@ -105,7 +105,7 @@ $(function() {
                 $btns.eq(correct).addClass('yes');
                 functap(0);
             }
-        })
+        });
     }
     //修改弹窗数据
     function initpop(name, num) {
@@ -117,7 +117,6 @@ $(function() {
     function sendAndGet(id, score) {
         if(score) {
             money += score;
-            console.log(1);
             $coinAll.find('.num').text(money);
             $coinAdd.show().find('.num').text('+' + score);
         }
@@ -131,6 +130,7 @@ $(function() {
                 },
                 success: function(data) {
                     $coinAdd.hide();
+                    $('.loading').hide();
                     if(data.is_upgrade) {
                         initpop(data.rank_name, data.love_num);
                         //关闭弹窗

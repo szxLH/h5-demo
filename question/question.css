@@ -310,6 +310,25 @@ html {
   color: #0950a0;
 }
 
+.loading {
+  position: fixed;
+  top: 0;
+  width: 7.5rem;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.loading img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.64rem;
+  height: 0.64rem;
+  transform: translate(-50%, -50%);
+  animation: loading 1s linear infinite;
+}
+
 @keyframes showUp {
   0% {
     top: 1.3rem;
@@ -322,5 +341,14 @@ html {
   100% {
     top: 0.7rem;
     opacity: 0;
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
