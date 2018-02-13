@@ -50,54 +50,27 @@ img{
   margin-right: 0.1rem;
 }
 .menu{
-  margin-top:0.24rem;
+  margin-top:0.45rem;
 }
-.menu li{
-  width: 50%;
-  float:left;
-  margin-bottom: 0.05rem;
-}
-.menu::after{
-  clear: both;
-  content: "";
-  display: block;
-}
-.menu li div{
-  margin-right: 0.35rem;
-  width:3.1rem;
-  height:3.1rem;
+.menu li {
+  margin: 0 auto .1rem;
+  padding-top: 1.15rem;
+  width: 5.9rem;
+  height: .95rem;
+  font-size: .44rem;
+  line-height: 2.75rem;
+  color: #ffffff;
+  text-align: center;
   background-size: 100% 100%;
-  position: relative;
 }
-.menu li:nth-child(2n+1) div,.menu li:nth-child(2n+1) p{
-  margin-right:0.35rem;
+.menu li.btn1 {
+  background-image: url("../home/btn1.png");
 }
-.menu li:nth-child(2n) div,.menu li:nth-child(2n) p{
-  margin-left:0.35rem;
+.menu li.btn2 {
+  background-image: url("../home/btn2.png");
 }
-.menu_1{
-  position: absolute;
-  bottom: -0.2rem;
-  left: 0.25rem;
-  width: 2.5rem;
-}
-.menu_2{
-  width: 2rem;
-  right: 0.17rem;
-  top: 0;
-  position: absolute;
-}
-.menu_3{
-  position: absolute;
-  width: 2.7rem;
-  right: -0.02rem;
-  bottom:0.19rem;
-}
-.menu_4{
-  width: 2.3rem;
-}
-.menu li p img{
-  height:0.5rem;
+.menu li.btn3 {
+  background-image: url("../home/btn3.png");
 }
 footer{
   position: absolute;

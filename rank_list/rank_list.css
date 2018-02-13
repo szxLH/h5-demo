@@ -210,18 +210,22 @@ body {
 
 .list li .info {
   float: left;
-  padding-top: 0.42rem;
+  padding-top: 0.32rem;
   padding-left: 0.18rem;
 }
 
 .list li .info .name {
+  overflow: hidden;
   padding-left: 2px;
+  width: 2.8rem;
   font-size: 0.4rem;
   color: #ffffff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .list li .info .tag {
-  margin-top: 0.16rem;
+  margin-top: 0.08rem;
   width: 1.8rem;
   height: 0.4rem;
   font-size: 0.28rem;
@@ -236,6 +240,17 @@ body {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+}
+
+.list li .info .coin {
+  margin-top: 0.08rem;
+  padding-left: 0.32rem;
+  font-size: 0.22rem;
+  color: #ffffff;
+  background-image: url("../rank_list/images/coin.png");
+  background-size: 0.26rem 0.26rem;
+  background-position: left center;
+  background-repeat: no-repeat;
 }
 
 .list li .price {
@@ -318,18 +333,22 @@ body {
 
 .me .info {
   float: left;
-  padding-top: 0.42rem;
+  padding-top: 0.32rem;
   padding-left: 0.18rem;
 }
 
 .me .info .name {
+  overflow: hidden;
   padding-left: 2px;
+  width: 2.8rem;
   font-size: 0.4rem;
   color: #ffffff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .me .info .tag {
-  margin-top: 0.16rem;
+  margin-top: 0.08rem;
   width: 1.8rem;
   height: 0.4rem;
   font-size: 0.28rem;
@@ -344,4 +363,15 @@ body {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+}
+
+.me .info .coin {
+  margin-top: 0.08rem;
+  padding-left: 0.32rem;
+  font-size: 0.22rem;
+  color: #ffffff;
+  background-image: url("../rank_list/images/coin.png");
+  background-size: 0.26rem 0.26rem;
+  background-position: left center;
+  background-repeat: no-repeat;
 }
